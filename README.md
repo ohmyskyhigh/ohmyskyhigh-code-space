@@ -1,2 +1,2 @@
 # ohmyskyhigh-code-space
-self-study notes
+Kaushik Parmar - KAVObits
