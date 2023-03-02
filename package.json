@@ -1,0 +1,57 @@
+{
+  "name": "labelgenie",
+  "version": "1.0.0",
+  "description": "An application that supports different brands of label printers.",
+  "main": "build/main/index.js",
+  "scripts": {
+    "postinstall": "cd src/renderer && yarn",
+    "prebuild": "cd src/renderer && yarn build",
+    "frontend:start": "cd src/renderer && yarn start",
+    "desktop:start": "tsc && electron .",
+    "start:dev": "concurrently \"yarn frontend:start\" \"yarn desktop:start\"",
+    "package:win": "tsc && yarn prebuild && node ./copyReactBuildToDist.js && electron-builder -w",
+    "package:mac": "tsc && yarn prebuild && node ./copyReactBuildToDist.js && electron-builder -m",
+    "package:linux": "tsc && yarn prebuild && node ./copyReactBuildToDist.js && electron-builder -l",
+    "package:all": "tsc && yarn prebuild && node ./copyReactBuildToDist.js && electron-builder -mwl",
+    "lint": "eslint --ext .ts ."
+  },
+  "build": {
+    "appId": "com.abdurehman.labelgenie",
+    "files": [
+      "!**/**",
+      "node_modules/**",
+      "build/**"
+    ],
+    "win": {
+      "target": "portable"
+    }
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^18.8.3",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "concurrently": "^7.4.0",
+    "eslint": "^8.0.1",
+    "eslint-plugin-import": "^2.25.0",
+    "copy-dir": "^1.3.0",
+    "electron-builder": "^23.6.0",
+    "electron-devtools-installer": "^3.2.0",
+    "dotenv": "^16.0.3",
+    "typescript": "~4.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdulRehmanMehar/ohmyskyhigh-code-space.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Abdul Rehman",
+    "email": "mehars.6925@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdulRehmanMehar/ohmyskyhigh-code-space/issues"
+  },
+  "homepage": "https://github.com/AbdulRehmanMehar/ohmyskyhigh-code-space#readme"
+}
