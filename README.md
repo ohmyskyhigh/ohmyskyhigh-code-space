@@ -1,2 +1,1 @@
-# ohmyskyhigh-code-space
-self-study notes
+Shalva Gegia
