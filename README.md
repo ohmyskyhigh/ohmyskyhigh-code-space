@@ -1,2 +1,1 @@
-# ohmyskyhigh-code-space
-self-study notes
+My name is Faisal Saleem, and you can find my Upwork profile at: https://www.upwork.com/freelancers/faisalsaleem
