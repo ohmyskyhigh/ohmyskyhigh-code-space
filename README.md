@@ -45,8 +45,3 @@ Please adhere to this project's `code of conduct`.
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-
-# Project Title
-
-A brief description of what this project does and who it's for
-
